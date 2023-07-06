@@ -1,4 +1,14 @@
 <p align="center">
+<h1>Loja node nestJS</h1>
+
+Projeto que está sendo desenvolvido usando um dos frameworks mais conhecidos do mercado de back end em javascript node, o nestJS.
+
+Basicamente simulando requisições, login de usuário, fluxo de usuários de uma loja.
+</p>
+
+---
+
+<p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 

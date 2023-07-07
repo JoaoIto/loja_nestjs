@@ -4,6 +4,4 @@ export class UserRepository {
   save(users) {
     this.users.push(users);
   }
-
-  
 }

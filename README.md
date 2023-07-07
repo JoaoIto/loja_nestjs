@@ -1,9 +1,19 @@
-<p align="center">
+<div align="center">
 <h1>Loja node nestJS</h1>
-
+</div>
 Projeto que está sendo desenvolvido usando um dos frameworks mais conhecidos do mercado de back end em javascript node, o nestJS.
 
-Basicamente simulando requisições, login de usuário, fluxo de usuários de uma loja.
+
+Este é um projeto de exemplo que implementa um CRUD de usuários para uma loja, usando o framework Nest.js.
+
+## Instalação
+
+Certifique-se de ter o Node.js instalado em sua máquina. Em seguida, siga os passos abaixo:
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/JoaoIto/loja_nestjs.git
 </p>
 
 ---

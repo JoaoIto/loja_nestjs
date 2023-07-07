@@ -1,3 +1,9 @@
 export class UserRepository {
-  constructor(private readonly userModel: Model<UserDocument>) {}
+  private users = [];
+
+  save(users) {
+    this.users.push(users);
+  }
+
+  
 }

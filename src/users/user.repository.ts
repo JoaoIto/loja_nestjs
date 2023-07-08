@@ -14,9 +14,7 @@ export class UserRepository {
   }
 
   async existEmail(email: string) {
-    const IsUser = this.users.find(
-      user => user.email === email
-    );
+    const IsUser = this.users.find((user) => user.email === email);
 
     return IsUser !== undefined;
   }

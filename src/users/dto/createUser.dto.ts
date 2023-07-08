@@ -1,4 +1,5 @@
 import { IsString, IsEmail, MinLength, IsNotEmpty } from 'class-validator';
+import { IsEmailConstraint } from '../validation/emailConstraint.validator';
 
 export class CreateUserDTO {
   @IsString()
@@ -8,6 +9,9 @@ export class CreateUserDTO {
   @IsEmail(undefined, {
     message:
       'O email é inválido! Verifique se esqueceu alguma informação ou ocorreu erro de digitação!',
+  })
+  @IsEmailConstraint({
+    message: 'Já existe um usuário cadastrado com esse email!',
   })
   @IsNotEmpty({
     message: 'O email não pode estar vazio!',

@@ -15,7 +15,7 @@ export class EmailConstraintValidator implements ValidatorConstraintInterface {
 
   async validate(
     value: any,
-    validationArguments?: ValidationArguments,
+    _validationArguments?: ValidationArguments,
   ): Promise<boolean> {
     const IsUserEmail = await this.userRepository.existEmail(value);
 

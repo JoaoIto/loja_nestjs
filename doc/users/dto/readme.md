@@ -39,3 +39,65 @@ export class CreateUserDTO {
 ```
 
 ---
+
+
+## DTO Imports:
+
+Primeiro, adicione a importação do CreateUserDTO no arquivo user.controller.ts:
+
+```ts
+import { CreateUserDTO } from './dto/create-user.dto';
+```
+
+Certifique-se de que o caminho da importação está correto, de acordo com a estrutura de diretórios do seu projeto.
+
+No mesmo arquivo user.controller.ts, modifique o método createUser() para usar o CreateUserDTO:
+
+```ts
+@Post()
+async createUser(@Body() createUserDto: CreateUserDTO) {
+  // Seu código para criar o usuário com base no createUserDto
+}
+```
+
+Agora, o método createUser() receberá o createUserDto como parâmetro e utilizará a estrutura definida no DTO para validar os dados recebidos.
+
+No arquivo user.service.ts, adicione a importação do CreateUserDTO:
+
+```ts
+import { CreateUserDTO } from './dto/create-user.dto';
+```
+
+No método createUser() do UserService no arquivo user.service.ts, modifique o parâmetro para receber o CreateUserDTO:
+
+
+```ts
+async createUser(createUserDto: CreateUserDTO) {
+  // Seu código para criar o usuário com base no createUserDto
+}
+
+```
+
+Agora, o método createUser() receberá o createUserDto como parâmetro do tipo CreateUserDTO.
+
+No arquivo user.repository.ts, adicione a importação do CreateUserDTO:
+
+
+```ts
+import { CreateUserDTO } from './dto/create-user.dto';
+```
+
+No método save() do UserRepository no arquivo user.repository.ts, modifique o parâmetro para receber o CreateUserDTO:
+
+
+```ts
+async save(createUserDto: CreateUserDTO) {
+  // Seu código para salvar o usuário com base no createUserDto
+}
+```
+
+Agora, o método save() receberá o createUserDto como parâmetro do tipo CreateUserDTO.
+
+Após fazer essas modificações, o CreateUserDTO será usado em toda a cadeia de execução, desde o controlador até o repositório, permitindo a validação dos dados de acordo com as regras definidas no DTO.
+
+---

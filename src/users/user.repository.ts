@@ -1,7 +1,7 @@
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
 export class UserRepository {
-  findAll() {
-    throw new Error('Method not implemented.');
-  }
   private users = [];
 
   async save(users) {

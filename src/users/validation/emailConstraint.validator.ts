@@ -1,7 +1,9 @@
 import {
   ValidationArguments,
+  ValidationOptions,
   ValidatorConstraint,
   ValidatorConstraintInterface,
+  registerDecorator,
 } from 'class-validator';
 import { UserRepository } from '../user.repository';
 import { Injectable } from '@nestjs/common';
@@ -20,3 +22,15 @@ export class EmailConstraintValidator implements ValidatorConstraintInterface {
     return !IsUserEmail;
   }
 }
+
+export const IsEmailConstraint = (options: ValidationOptions) => {
+  return (object: object, property: string) => {
+    registerDecorator({
+      target: object.constructor,
+      propertyName: property,
+      options: options,
+      constraints: [],
+      validator: EmailConstraintValidator,
+    });
+  };
+};
